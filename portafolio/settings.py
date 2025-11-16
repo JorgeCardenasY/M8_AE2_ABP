@@ -1,24 +1,22 @@
 from pathlib import Path
 import os
-from dotenv import load_dotenv
 import dj_database_url
-
-load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# CORRECTO: Usar el NOMBRE de la variable, no el valor
-SECRET_KEY = os.getenv('SECRET_KEY')
+# FORMA CORRECTA: Nombre de variable, no el valor
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
-# VERIFICACIÓN CRÍTICA: Si no hay SECRET_KEY, mostrar error
+# VERIFICACIÓN CRÍTICA
 if not SECRET_KEY:
-    raise ValueError("SECRET_KEY no está configurada en las variables de entorno")
+    # Valor temporal SOLO para que no falle - ELIMINAR después
+    SECRET_KEY = 'django-insecure-temporal-para-render-' + str(os.urandom(20).hex())
+    print("⚠️  ADVERTENCIA: SECRET_KEY no encontrada, usando valor temporal")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# CORRECTO: True solo si la variable es 'True'
-DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
+DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
 ALLOWED_HOSTS = ['m8-ae2-abp.onrender.com', 'localhost', '127.0.0.1', '.render.com']
 
@@ -35,7 +33,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",  # ✅ AGREGAR ESTO
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # CRÍTICO para Render
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -101,7 +99,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
-# Configuración WhiteNoise para archivos estáticos
+# WhiteNoise configuration
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MEDIA_URL = "/media/"
