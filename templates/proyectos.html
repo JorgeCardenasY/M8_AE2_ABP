@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Mis Proyectos - Portafolio{% endblock %}
+
+{% block content %}
+<div class="container contenido">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="card border-danger">
+                <div class="card-header text-center py-4">
+                    <h4 class="card-title mb-0 text-danger">Mis Proyectos en GitHub</h4>
+                </div>
+                <div class="card-body text-white">
+                    <p>Aquí puedes explorar una selección de mis proyectos de desarrollo, alojados en mi repositorio de GitHub. Cada proyecto refleja mi experiencia y habilidades en diversas tecnologías.</p>
+                    
+                    <div class="text-center my-4">
+                        <a href="https://github.com/JorgeCardenasY?tab=repositories" target="_blank" class="btn btn-danger btn-lg">
+                            <i class="bi bi-github me-2"></i>Ver todos mis repositorios en GitHub
+                        </a>
+                    </div>
+
+                    <hr class="border-danger my-4">
+
+                    <h5>Proyectos Destacados (Ejemplos)</h5>
+                    <p>A continuación, se listan algunos proyectos destacados. Para una lista completa y el código fuente, por favor visita mi perfil de GitHub.</p>
+                    
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-dark text-white border-danger">
+                            <h6>Proyecto 1: Nombre del Proyecto</h6>
+                            <p>Descripción breve del proyecto, tecnologías utilizadas y un enlace directo al repositorio.</p>
+                            <a href="https://github.com/JorgeCardenasY/M2_PORTAFOLIO" target="_blank" class="btn btn-sm btn-outline-danger">Ver en GitHub</a>
+                        </li>
+                        <li class="list-group-item bg-dark text-white border-danger mt-2">
+                            <h6>Proyecto 2: Otro Proyecto Interesante</h6>
+                            <p>Descripción breve del proyecto, tecnologías utilizadas y un enlace directo al repositorio.</p>
+                            <a href="https://github.com/JorgeCardenasY/M2_PORTAFOLIO" target="_blank" class="btn btn-sm btn-outline-danger">Ver en GitHub</a>
+                        </li>
+                        <li class="list-group-item bg-dark text-white border-danger mt-2">
+                            <h6>Proyecto 3: Aplicación Web con Django</h6>
+                            <p>Descripción breve del proyecto, tecnologías utilizadas y un enlace directo al repositorio.</p>
+                            <a href="https://github.com/JorgeCardenasY/M2_PORTAFOLIO" target="_blank" class="btn btn-sm btn-outline-danger">Ver en GitHub</a>
+                        </li>
+                    </ul>
+
+                    <p class="mt-4">Si tienes alguna pregunta sobre mis proyectos o te gustaría colaborar, no dudes en <a href="{% url 'contact' %}" class="text-danger">contactarme</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

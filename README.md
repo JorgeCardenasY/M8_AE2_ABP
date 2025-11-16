@@ -65,3 +65,27 @@ La diferencia en la organización de los archivos es notable y refleja la especi
 ## Conclusión
 
 Con lo anterior, podemos decir que la transición del proyecto estático a una aplicación Django demuestra un avance significativo en las competencias técnicas  desarrolladas durante el BootCamp: Se pasa de un modelo de presentación simple a una arquitectura de software robusta, escalable y mantenible. La implementación con Django evidencia la comprensión de conceptos de desarrollo backend, como el patrón MVT, el procesamiento de formularios del lado del servidor y el uso de un sistema de plantillas para la generación de vistas dinámicas. Este enfoque sienta las bases para futuras potencialidades en el desarrollo, tales como la integración con bases de datos SQL, la autenticación de usuarios y la creación de APIs.
+
+---
+
+## Últimas Modificaciones
+
+Posterior a la implementación inicial, se han realizado las siguientes mejoras funcionales en la aplicación Django:
+
+### 1. Vista de Confirmación de Envío
+
+Para mejorar la experiencia del usuario, se ha creado una vista de confirmación (`confirmation.html`). Anteriormente, tras enviar el formulario de contacto, el usuario era redirigido a la página de inicio. Ahora, es dirigido a una página dedicada que le informa que el mensaje fue enviado con éxito y le proporciona un botón para regresar al inicio. Esto se ha implementado de la siguiente manera:
+-   **Creación de la plantilla `confirmation.html`**.
+-   **Añadida una nueva vista `confirmation`** en `CV/views.py`.
+-   **Actualización de `CV/urls.py`** con la nueva ruta.
+-   **Modificación de la vista `contact`** para que redirija a `confirmation` tras un envío exitoso.
+
+### 2. Página de Proyectos
+
+Se ha añadido una nueva sección para mostrar los proyectos del desarrollador. Esta sección tiene como objetivo centralizar los trabajos disponibles en el repositorio de GitHub.
+-   **Creación de la plantilla `proyectos.html`**, que incluye un enlace principal al perfil de GitHub y una lista de proyectos destacados de ejemplo.
+-   **Añadida una nueva vista `proyectos`** en `CV/views.py`.
+-   **Actualización de `CV/urls.py`** con la ruta `/proyectos/`.
+-   **Modificación de la barra de navegación (`navbar.html`)** para que el enlace "Proyectos" dirija a esta nueva página.
+
+Estas modificaciones contribuyen a una aplicación más completa y con una mejor experiencia de usuario, siguiendo las mejores prácticas de desarrollo web con Django.

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Confirmación de Envío{% endblock %}
+
+{% block content %}
+<div class="container contenido">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card border-success text-center">
+                <div class="card-header py-4">
+                    <h4 class="card-title mb-0 text-success">¡Mensaje Enviado con Éxito!</h4>
+                </div>
+                <div class="card-body text-white">
+                    <p>Gracias por contactarme. Responderé a tu mensaje lo antes posible.</p>
+                    <a href="{% url 'index' %}" class="btn btn-success mt-3">Volver al Inicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
