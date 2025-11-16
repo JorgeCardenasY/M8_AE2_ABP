@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}Análisis de Datos - Portafolio{% endblock %}
+
+{% block content %}
+<div class="container contenido">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="card border-danger">
+                <div class="card-header text-center py-4">
+                    <h4 class="card-title mb-0 text-danger">Desarrollo de Análisis de Datos</h4>
+                </div>
+                <div class="card-body text-white">
+                    <p>En el campo del análisis de datos, la elección de la herramienta adecuada es fundamental para transformar datos crudos en conocimiento accionable. A continuación, se presenta una descripción de las tecnologías clave utilizadas en el desarrollo de soluciones analíticas.</p>
+
+                    <h5>Power BI</h5>
+                    <p>Microsoft Power BI es una herramienta de inteligencia de negocios que permite unificar datos de múltiples fuentes para crear dashboards interactivos e informes visuales. Su interfaz intuitiva facilita la exploración de datos y la generación de insights sin necesidad de una programación extensiva.</p>
+
+                    <h5>Python con Pandas</h5>
+                    <p>Python se ha consolidado como el lenguaje de programación predilecto para el análisis de datos, en gran parte gracias a la biblioteca Pandas. Pandas proporciona estructuras de datos de alto rendimiento y fáciles de usar, como los DataFrames, que permiten la manipulación, limpieza y análisis de datos de manera eficiente y programática.</p>
+
+                    <h5>R</h5>
+                    <p>R es un lenguaje y entorno de software libre enfocado en la computación estadística y gráficos. Es altamente extensible y cuenta con una vasta colección de paquetes para una amplia gama de técnicas estadísticas, desde el modelado lineal y no lineal hasta el análisis de series temporales y la clasificación.</p>
+
+                    <h5 class="mt-4">Tabla Comparativa de Herramientas</h5>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-dark table-striped border-danger">
+                            <thead>
+                                <tr>
+                                    <th>Característica</th>
+                                    <th>MS Excel</th>
+                                    <th>Power BI</th>
+                                    <th>Python (con Pandas)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Curva de Aprendizaje</td>
+                                    <td>Baja</td>
+                                    <td>Media</td>
+                                    <td>Alta</td>
+                                </tr>
+                                <tr>
+                                    <td>Volumen de Datos</td>
+                                    <td>Limitado</td>
+                                    <td>Grande (GBs)</td>
+                                    <td>Muy Grande (Depende de la memoria)</td>
+                                </tr>
+                                <tr>
+                                    <td>Visualización</td>
+                                    <td>Básica</td>
+                                    <td>Avanzada e Interactiva</td>
+                                    <td>Altamente personalizable (Matplotlib, Seaborn)</td>
+                                </tr>
+                                <tr>
+                                    <td>Automatización</td>
+                                    <td>Limitada (Macros)</td>
+                                    <td>Moderada (Power Query)</td>
+                                    <td>Completa (Scripts)</td>
+                                </tr>
+                                <tr>
+                                    <td>Análisis Estadístico</td>
+                                    <td>Básico</td>
+                                    <td>Integrado con R y Python</td>
+                                    <td>Extensivo (Statsmodels, SciPy)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <hr class="border-danger my-4">
+
+                    <div class="text-center">
+                        <p class="h5">¿Crees que tus datos no tienen nada más que decir? Desafíame.</p>
+                        <a href="{% url 'contact' %}" class="btn btn-danger mt-2">
+                            <i class="bi bi-envelope-paper me-2"></i>Hablemos de tu Proyecto
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

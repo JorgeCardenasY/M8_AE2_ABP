@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Contacto - Portafolio{% endblock %}
+
+{% block content %}
+<div class="container contenido">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card border-danger">
+                <div class="card-header text-center py-4">
+                    <h4 class="card-title mb-0 text-danger">Formulario de Contacto</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-danger">Enviar Mensaje</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - Portafolio{% endblock %}
+
+{% block content %}
+<!-- Primera Sección -->
+<div class="container contenido">
+    <!-- INICIO ROW Y DOS CARDS  -->
+    <div class="row g-4 mx-2 my-2 justify-content-center">
+        <div class="col-12 col-md-10 col-lg-6">
+            <div class="card border-danger">
+                <div class="card-header text-center py-4">
+                                            <div class="icon-wrapper">
+                        <i class="bi bi-bar-chart"></i>
+                    </div>
+                    <h4 class="card-title mb-0 text-danger">Análisis de datos</h4>
+                </div>
+                <div class="card-body">
+                    <p class="text-white">Herramientas avanzadas para extraer insights valiosos de tus datos
+                        mediante técnicas estadísticas y visualización.</p>
+                </div>
+                <div class="card-footer border-0 text-center py-3">
+                    <a href="{% url 'analytics' %}" class="btn btn-danger">
+                        <i class="bi bi-bar-chart me-2"></i>¡Vamos!
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-10 col-lg-6">
+            <div class="card border-danger h-100">
+                <div class="card-header text-center py-4">
+                    <div class="icon-wrapper">
+                        <i class="bi bi-code-square"></i>
+                    </div>
+                    <h4 class="card-title mb-0 text-danger">Diseño Web</h4>
+                </div>
+                <div class="card-body">
+                    <p class="text-white">Creación de sitios web modernos, responsivos y con excelente experiencia
+                        de usuario utilizando las últimas tecnologías.</p>
+                </div>
+                <div class="card-footer border-0 text-center py-3">
+                    <a href="https://elabs.cl" target="_blank" class="btn btn-danger">
+                        <i class="bi bi-laptop me-2"></i>¡Vamos!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN ROW Y DOS CARDS  -->
+
+    <!-- INICIO ROW Y TRES CARDS  -->
+    <div class="row g-4 mx-2 my-5 justify-content-center">
+        <div class="col-12 col-md-10 col-lg-4">
+            <div class="card border-danger h-100">
+                <div class="card-header text-center py-4">
+                    <div class="icon-wrapper">
+                        <i class="bi bi-terminal"></i>
+                    </div>
+                    <h4 class="card-title mb-0 text-danger">BootCamp<br>FullStack Python</h4>
+                </div>
+                <div class="card-body">
+                    <p class="text-white">Programa intensivo para dominar desarrollo web con Python, Django,
+                        JavaScript y bases de datos.</p>
+                </div>
+                <div class="card-footer border-0 text-center py-3">
+                    <a href="#" class="btn btn-danger">
+                        <i class="bi bi-code-slash me-2"></i>¡Vamos!
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-10 col-lg-4">
+            <div class="card border-danger h-100">
+                <div class="card-header text-center py-4">
+                    <div class="icon-wrapper">
+                        <i class="bi bi-github"></i>
+                    </div>
+                    <h4 class="card-title mb-0 text-danger">Repositorio<br>GitHub</h4>
+                </div>
+                <div class="card-body">
+                    <p class="text-white text-center">Explora mis proyectos de código abierto y contribuciones a la comunidad de
+                        desarrolladores.</p>
+                </div>
+                <div class="card-footer border-0 text-center py-3">
+                    <a href="https://github.com/JorgeCardenasY?tab=repositories" target="_blank" class="btn btn-danger">
+                        <i class="bi bi-git me-2"></i>¡Vamos!
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-10 col-lg-4">
+            <div class="card border-danger h-100">
+                <div class="card-header text-center py-4">
+                    <div class="icon-wrapper">
+                        <i class="bi bi-file-earmark-person"></i>
+                    </div>
+                    <h4 class="card-title mb-0 text-danger">Perfil<br>Linkedin</h4>
+                </div>
+                <div class="card-body">
+                    <p class="text-white text-center">Visita mi perfil profesional en LinkedIn para conocer mi trayectoria y conectar conmigo.</p>
+                </div>
+                <div class="card-footer border-0 text-center py-3">
+                    <a href="https://www.linkedin.com/in/jorgecardenasy/" target="_blank" class="btn btn-danger">
+                        <i class="bi bi-linkedin me-2"></i>¡Vamos!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN ROW Y TRES CARDS  -->
+</div>
+{% endblock %}
