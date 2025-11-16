@@ -68,7 +68,7 @@ Con lo anterior, podemos decir que la transición del proyecto estático a una a
 
 ---
 
-## Últimas Modificaciones
+## Modificaciones del 15 de Noviembre de 2025
 
 Posterior a la implementación inicial, se han realizado las siguientes mejoras funcionales en la aplicación Django:
 
@@ -89,3 +89,26 @@ Se ha añadido una nueva sección para mostrar los proyectos del desarrollador. 
 -   **Modificación de la barra de navegación (`navbar.html`)** para que el enlace "Proyectos" dirija a esta nueva página.
 
 Estas modificaciones contribuyen a una aplicación más completa y con una mejor experiencia de usuario, siguiendo las mejores prácticas de desarrollo web con Django.
+
+## Modificaciones del 16 de Noviembre de 2025
+
+Posterior a la primera revisión de pares, se han realizado las siguientes mejoras de configuración, seguridad y calidad de código:
+
+### 1. Gestión de Archivos Estáticos
+
+Se corrigió un problema que impedía la correcta visualización de imágenes (como el logo del `navbar`). El archivo `portafolio/urls.py` fue modificado para servir adecuadamente los archivos estáticos durante el desarrollo, eliminando la necesidad de configuraciones obsoletas como `staticfiles_urlpatterns` que generaban errores en versiones modernas de Django.
+
+### 2. Gestión de Claves Secretas y Entorno
+
+Para mejorar la seguridad y seguir las buenas prácticas, las claves secretas y configuraciones sensibles se han externalizado del código fuente.
+-   **Instalación de `python-dotenv`**: Se añadió esta dependencia en `requirements.txt` para gestionar variables de entorno desde un archivo `.env`.
+-   **Creación de `.env`**: Se creó un archivo `.env` en la raíz del proyecto para almacenar la `SECRET_KEY` y las credenciales de correo electrónico.
+-   **Actualización de `.gitignore`**: Se añadió el archivo `.env` al `.gitignore` para evitar que las claves secretas sean subidas al repositorio de Git. También se incluyeron otras carpetas y archivos comunes como `myenv/`, `db.sqlite3` y `media/`.
+-   **Modificación de `settings.py`**: El archivo de configuración ahora lee las claves y otros valores sensibles desde las variables de entorno, eliminando la información sensible del código.
+
+### 3. Calidad y Formato del Código
+
+Se han integrado herramientas de formateo y "linting" para asegurar un código limpio, consistente y libre de errores comunes.
+-   **Instalación de `black` y `ruff`**: Se añadieron estas herramientas de desarrollo a `requirements.txt`.
+-   **Aplicación de Formato**: Se ejecutó `black` sobre todo el proyecto para estandarizar el formato del código Python.
+-   **Corrección de "Linting"**: Se utilizó `ruff` para analizar y corregir automáticamente errores y malas prácticas en el código.
